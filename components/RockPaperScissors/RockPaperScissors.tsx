@@ -1,5 +1,8 @@
 import { Image } from "expo-image";
 import { View } from "react-native";
+import Paper from "../Paper";
+import Rock from "../Rock";
+import Scissors from "../Scissors";
 
 const RockPaperScissors = () => {
   return (
@@ -17,42 +20,10 @@ const RockPaperScissors = () => {
           />
         </View>
         <View className="flex flex-row justify-between w-full  mx-auto">
-          <View className="w-1/2 max-w-40 max-h-40 h-screen rounded-full bg-white flex items-center justify-center border-[14px] border-blue-600 relative">
-            <View className="w-full h-full absolute top-0 left-0 rotate-[75deg] border-l-8 border-t-4 border-[#babfd5] rounded-full"></View>
-
-            <Image
-              source={require("../../assets/images/rock-paper-scissors/icon-paper.svg")}
-              style={{
-                width: 50,
-                height: 50,
-              }}
-              contentFit="contain"
-            />
-          </View>
-
-          <View className="w-1/2 max-w-40 max-h-40 h-screen relative rounded-full bg-white flex items-center justify-center border-[14px] border-yellow-500">
-            <View className="w-full h-full absolute top-0 left-0 rotate-[75deg] border-l-8 border-t-4 border-[#babfd5] rounded-full"></View>
-            <Image
-              source={require("../../assets/images/rock-paper-scissors/icon-scissors.svg")}
-              style={{
-                width: 50,
-                height: 50,
-              }}
-              contentFit="contain"
-            />
-          </View>
+          <Paper />
+          <Scissors />
         </View>
-        <View className="w-screen max-w-40 max-h-40 h-screen rounded-full bg-white flex items-center justify-center border-[14px] border-red-500 relative bottom-8">
-          <View className="w-full h-full absolute top-0 left-0 rotate-[75deg] border-l-8 border-t-4 border-[#babfd5] rounded-full"></View>
-          <Image
-            source={require("../../assets/images/rock-paper-scissors/icon-rock.svg")}
-            style={{
-              width: 50,
-              height: 50,
-            }}
-            contentFit="contain"
-          />
-        </View>
+        <Rock />
       </View>
     </View>
   );
